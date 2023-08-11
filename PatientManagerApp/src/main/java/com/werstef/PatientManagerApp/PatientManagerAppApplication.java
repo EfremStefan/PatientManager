@@ -1,13 +1,13 @@
-package com.werstef.PatientManager;
+package com.werstef.PatientManagerApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PatientManagerApplication {
+public class PatientManagerAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PatientManagerApplication.class, args);
+		SpringApplication.run(PatientManagerAppApplication.class, args);
 	}
 
 }
