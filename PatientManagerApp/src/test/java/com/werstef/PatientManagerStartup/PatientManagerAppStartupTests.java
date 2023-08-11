@@ -1,10 +1,10 @@
-package com.werstef.PatientManagerApp;
+package com.werstef.PatientManagerStartup;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PatientManagerAppApplicationTests {
+class PatientManagerAppStartupTests {
 
 	@Test
 	void contextLoads() {
