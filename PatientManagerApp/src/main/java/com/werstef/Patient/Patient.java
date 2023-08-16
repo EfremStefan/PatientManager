@@ -1,6 +1,8 @@
 package com.werstef.Patient;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -17,9 +19,13 @@ public class Patient {
 
     private String email;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dob;
 
     private Integer age;
+
+    public Patient() {
+    }
 
     public Patient(String name, String email, LocalDate dob, Integer age) {
         this.name = name;
@@ -80,6 +86,13 @@ public class Patient {
     }
 
     public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Patient(UUID id, String name, String email, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
         this.age = age;
     }
 

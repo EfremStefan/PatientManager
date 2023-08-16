@@ -16,15 +16,12 @@ public class PatientServiceImpl implements PatientService{
     }
 
     @Override
-    public List<String> getAllPatients() {
-        //return patientRepository.findAll().toString();
-        return List.of(new Patient("Efrem Stefan"
-                ,"stefan1@gmail.com",
-                LocalDate.of(1998, Month.JULY, 3),
-                23).toString(),
-                new Patient("Efrem Teodora"
-                        ,"teodora2@gmail.com",
-                        LocalDate.of(1998, Month.JULY, 20),
-                        24).toString());
+    public String getAllPatients() {
+        return patientRepository.findAll().toString();
+    }
+
+    @Override
+    public void addPatient(Patient patient) {
+        patientRepository.save(patient);
     }
 }
